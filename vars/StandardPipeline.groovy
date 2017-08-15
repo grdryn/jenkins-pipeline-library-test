@@ -14,14 +14,11 @@ def call(body) {
     body()
 
     node {
-        // Clean workspace before doing anything
-        deleteDir()
-
-
         try {
             //run_in_stage('Clone', {
             run_in_stage('Clone', {
-                    checkout scm
+                    //checkout scm
+                    echo 'pretend to checkout scm'
                 })
 
             stage ('Build') {
