@@ -2,6 +2,7 @@ import com.company.utils.pipelineFunctions;
 
 def run_in_stage(String stage_name, Closure command){
     def ris = new pipelineFunctions()
+    String emailadd = 'doesnt matter'
     ris.run_in_stage(stage_name, command, emailadd)
 }
 
