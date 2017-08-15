@@ -1,9 +1,7 @@
 import com.company.utils.pipelineFunctions;
-import com.company.utils.Git;
-
-def ris = new pipelineFunctions()
 
 def run_in_stage(String stage_name, Closure command){
+    def ris = new pipelineFunctions()
     ris.run_in_stage(stage_name, command, emailadd)
 }
 
@@ -20,7 +18,6 @@ def call(body) {
 
 
         try {
-            def ris = new pipelineFunctions()
             //run_in_stage('Clone', {
             run_in_stage('Clone', {
                     checkout scm
